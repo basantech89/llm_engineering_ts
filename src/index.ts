@@ -1,1 +1,1 @@
-export * from './lib/llm-engineering-ts';
+export * from './summarization-app/openai'
