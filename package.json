@@ -11,7 +11,9 @@
     "model:openai": "tsx ./src/summarization-app/openai.ts",
     "model:ollama:api": "tsx ./src/summarization-app/ollama-api.ts",
     "model:ollama": "tsx ./src/summarization-app/ollama.ts",
-    "brochure": "tsx ./src/brochure/openai.ts"
+    "brochure": "tsx ./src/brochure/openai.ts",
+    "code:llama": "tsx ./src/code-tutor/ollama.ts",
+    "code:openai": "tsx ./src/code-tutor/openai.ts"
   },
   "nx": {
     "includedScripts": []

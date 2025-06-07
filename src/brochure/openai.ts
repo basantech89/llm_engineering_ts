@@ -1,47 +1,7 @@
 import 'dotenv/config'
-import OpenAI, { APIPromise } from 'openai'
 import { Website } from './website'
-import {
-  ChatCompletion,
-  ChatCompletionChunk,
-  ChatCompletionCreateParamsNonStreaming,
-  ChatCompletionCreateParamsStreaming
-} from 'openai/resources/chat/completions'
-import { Stream } from 'openai/core/streaming'
 import mdToPdf from 'md-to-pdf'
-
-const apiKey = process.env.OPENAI_API_KEY
-
-const client = new OpenAI({ apiKey })
-
-type Arg<D> = Omit<D, 'model' | 'messages'>
-
-function callGPT(
-  systemPrompt: string,
-  userPrompt: string,
-  args: Arg<ChatCompletionCreateParamsNonStreaming>
-): APIPromise<ChatCompletion>
-function callGPT(
-  systemPrompt: string,
-  userPrompt: string,
-  args: Arg<ChatCompletionCreateParamsStreaming>
-): APIPromise<Stream<ChatCompletionChunk>>
-function callGPT(
-  systemPrompt: string,
-  userPrompt: string,
-  args: Arg<
-    ChatCompletionCreateParamsStreaming | ChatCompletionCreateParamsNonStreaming
-  >
-) {
-  return client.chat.completions.create({
-    model: 'gpt-4o-mini',
-    messages: [
-      { role: 'system', content: systemPrompt },
-      { role: 'user', content: userPrompt }
-    ],
-    ...args
-  })
-}
+import { callGPT } from 'src/helpers/llms'
 
 export async function getLinks(
   website: Website
