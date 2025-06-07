@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import { Website } from './website'
 import mdToPdf from 'md-to-pdf'
-import { callGPT } from 'src/helpers/llms'
+import { callGPTCompletions } from 'src/helpers/llms'
 
 export async function getLinks(
   website: Website
@@ -25,7 +25,7 @@ respond with the full https URL in JSON format. Do not include Terms of Service,
 Links (some might be relative links):
 ${website.links.join('\n')}`
 
-  const response = await callGPT(systemPrompt, userPrompt, {
+  const response = await callGPTCompletions(systemPrompt, userPrompt, {
     response_format: {
       type: 'json_object'
     }
@@ -54,7 +54,9 @@ const makeBrochure = async (companyName: string, url: string) => {
   Here are the contents of its landing page and other relevant pages; use this information to build a short brochure of the company in markdown.
   ${result}`
 
-  const stream = await callGPT(systemPrompt, userPrompt, { stream: true })
+  const stream = await callGPTCompletions(systemPrompt, userPrompt, {
+    stream: true
+  })
 
   let markdown = ''
   for await (const chunk of stream) {

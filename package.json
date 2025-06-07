@@ -13,13 +13,16 @@
     "model:ollama": "tsx ./src/summarization-app/ollama.ts",
     "brochure": "tsx ./src/brochure/openai.ts",
     "code:llama": "tsx ./src/code-tutor/ollama.ts",
-    "code:openai": "tsx ./src/code-tutor/openai.ts"
+    "code:openai": "tsx ./src/code-tutor/openai.ts",
+    "code:claude": "tsx ./src/code-tutor/claude.ts",
+    "battle": "tsx ./src/llm-battle/index.ts"
   },
   "nx": {
     "includedScripts": []
   },
   "packageManager": "yarn@4.9.1",
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.53.0",
     "dotenv": "^16.5.0",
     "md-to-pdf": "^5.2.4",
     "node-html-parser": "^7.0.1",
