@@ -15,7 +15,9 @@
     "code:llama": "tsx ./src/code-tutor/ollama.ts",
     "code:openai": "tsx ./src/code-tutor/openai.ts",
     "code:claude": "tsx ./src/code-tutor/claude.ts",
-    "battle": "tsx ./src/llm-battle/index.ts"
+    "battle": "tsx ./src/llm-battle/index.ts",
+    "gen:img": "tsx ./src/generation/img.ts",
+    "gen:audio": "tsx ./src/generation/audio.ts"
   },
   "nx": {
     "includedScripts": []
