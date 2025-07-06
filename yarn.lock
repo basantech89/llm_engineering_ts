@@ -1620,6 +1620,7 @@ __metadata:
   dependencies:
     "@anthropic-ai/sdk": "npm:^0.53.0"
     "@eslint/js": "npm:^9.8.0"
+    "@lmstudio/sdk": "npm:^1.3.0"
     "@nx/eslint": "npm:21.1.2"
     "@nx/eslint-plugin": "npm:21.1.2"
     "@nx/js": "npm:21.1.2"
@@ -1655,6 +1656,28 @@ __metadata:
     vitest: "npm:^3.0.0"
   languageName: unknown
   linkType: soft
+
+"@lmstudio/lms-isomorphic@npm:^0.4.6":
+  version: 0.4.6
+  resolution: "@lmstudio/lms-isomorphic@npm:0.4.6"
+  dependencies:
+    ws: "npm:^8.16.0"
+  checksum: 10c0/35a512a98e9b02389e0c7b611f74458d808ed470fb0d07aa3a142593de3403c76b042d78b347ffaef3f30562befc03801359bc7e55446a4f0e2f98908acb9570
+  languageName: node
+  linkType: hard
+
+"@lmstudio/sdk@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@lmstudio/sdk@npm:1.3.0"
+  dependencies:
+    "@lmstudio/lms-isomorphic": "npm:^0.4.6"
+    chalk: "npm:^4.1.2"
+    jsonschema: "npm:^1.5.0"
+    zod: "npm:^3.22.4"
+    zod-to-json-schema: "npm:^3.22.5"
+  checksum: 10c0/63cac405e0863c180df92d32106a8bc0f70f082f970ddcc9b2b17050d77c93a8e7e8ff90f084627f094d11beb41c1995b9130d3f5099f60139f0fd3ccf8bc8e2
+  languageName: node
+  linkType: hard
 
 "@napi-rs/wasm-runtime@npm:0.2.4":
   version: 0.2.4
@@ -5267,6 +5290,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jsonschema@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "jsonschema@npm:1.5.0"
+  checksum: 10c0/c24ddb8d741f02efc0da3ad9b597a275f6b595062903d3edbfaa535c3f9c4c98613df68da5cb6635ed9aeab30d658986fea61d7662fc5b2b92840d5a1e21235e
+  languageName: node
+  linkType: hard
+
 "keyv@npm:^4.5.4":
   version: 4.5.4
   resolution: "keyv@npm:4.5.4"
@@ -7788,6 +7818,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ws@npm:^8.16.0":
+  version: 8.18.3
+  resolution: "ws@npm:8.18.3"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 10c0/eac918213de265ef7cb3d4ca348b891a51a520d839aa51cdb8ca93d4fa7ff9f6ccb339ccee89e4075324097f0a55157c89fa3f7147bde9d8d7e90335dc087b53
+  languageName: node
+  linkType: hard
+
 "ws@npm:^8.18.2":
   version: 8.18.2
   resolution: "ws@npm:8.18.2"
@@ -7883,6 +7928,22 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: 10c0/dceb44c28578b31641e13695d200d34ec4ab3966a5729814d5445b194933c096b7ced71494ce53a0e8820685d1d010df8b2422e5bf2cdea7e469d97ffbea306f
+  languageName: node
+  linkType: hard
+
+"zod-to-json-schema@npm:^3.22.5":
+  version: 3.24.6
+  resolution: "zod-to-json-schema@npm:3.24.6"
+  peerDependencies:
+    zod: ^3.24.1
+  checksum: 10c0/b907ab6d057100bd25a37e5545bf5f0efa5902cd84d3c3ec05c2e51541431a47bd9bf1e5e151a244273409b45f5986d55b26e5d207f98abc5200702f733eb368
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.22.4":
+  version: 3.25.74
+  resolution: "zod@npm:3.25.74"
+  checksum: 10c0/59e38b046ac333b5bd1ba325a83b6798721227cbfb1e69dfc7159bd7824b904241ab923026edb714fafefec3624265ae374a70aee9a5a45b365bd31781ffa105
   languageName: node
   linkType: hard
 
